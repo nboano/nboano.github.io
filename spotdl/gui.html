@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Downloader Spotify By Kinder Boano</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        .centroPagina {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <div class="container-fluid p-5 bg-primary text-black text-center centroPagina" style="height: 100vh; background-image: url(https://api.thefutzbutler.com/storage/418/Spotify-Highlark-Feature-1280x860.gif); background-size: cover; ">
+        <div class="content" style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 20px;">
+            <div style="font-size: 7vh;">
+                <b>Spotify Downloader</b>
+            </div>
+            <br>
+            <p>Incolla qui il link di una playlist o di un brano da Spotify e goditi la magia!</p>
+            <br><br />
+            <form action="index.html" method="GET">
+                <input type="url" name="id" class="form-control form-control-lg" value="https://open.spotify.com/playlist/37i9dQZEVXbIQnj7RRhdSX" pattern="http(s?):\/\/(.?)+spotify\.com\/(playlist)?(track)?\/.+(\??)" />
+                <br />
+                <select class="form-control form-control-lg" name="q">
+                    <option value="320">Qualità massima (320kbps)</option>
+                    <option value="256">Qualità alta (256kbps)</option>
+                    <option value="192" selected>Qualità standard (192kbps)</option>
+                    <option value="128">Qualità media (128kbps)</option>
+                    <option value="64">Qualità bassa (64kbps)</option>
+                </select>
+                <br /><br />
+                <button type="submit" class="btn btn-primary">Vai</button>
+            </form>
+            <br />
+        </div>
+    </div>
+</body>
+</html>

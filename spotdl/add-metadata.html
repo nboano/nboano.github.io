@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Aggiunta metadati su MP3</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script async src="add-metadata.js"></script>
+    <script src="https://unpkg.com/browser-id3-writer@4.4.0/dist/browser-id3-writer.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .centroPagina {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-primary">
+    <div class="container-fluid p-5 bg-primary text-white centroPagina" style="height: 100vh;background-size: cover;" id="main">
+        <div class="row">
+            <div class="col-sm-4">
+                <img id="imgCopertina" src="" />
+            </div>
+            <div class="col-sm-8">
+                <h2 id="statusText"></h2>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" id="progressbar"></div>
+                </div>
+                <form style="display: none;" onsubmit="aggiungiTag(this.nome.value, this.artista.value, this.testo.value); return false;">
+                    <div class="form-group">
+                        <label for="txtNome">Nome canzone</label>
+                        <input type="text" class="form-control" id="txtNome" placeholder="Inserisci il nome della traccia" name="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtArtista">Artista</label>
+                        <input type="text" class="form-control" id="txtArtista" placeholder="Inserisci l'artista" name="artista">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTestoCanz">Testo Canzone</label>
+                        <textarea class="form-control" id="txtTestoCanz" placeholder="Testo Canzone" name="testo"></textarea>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-success">Scrivi dati</button>
+                    &nbsp;
+                    <a style="display: none;" class="btn btn-warning" id="lnkScarica">Scarica canzone</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
