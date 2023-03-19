@@ -1,6 +1,6 @@
 
-const CORS_API_URL = "https://www.mb-srv.tk/cors-anywhere/";
-
+//const CORS_API_URL = "https://www.mb-srv.tk/cors-anywhere/";
+const CORS_API_URL = "https://cors.mb-srv.tk/";
 //const CORS_API_URL = "https://mb-srv.loca.lt/cors-anywhere/";
 
 async function avviaDownload(barid, mp3URL, imgURL, nome, artista, track, qualita) {
